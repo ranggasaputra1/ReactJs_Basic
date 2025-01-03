@@ -1,3 +1,5 @@
+import "./HelloWorld.css";
+
 export default function HelloWorld() {
   const props = {
     text: "Hello World semua",
@@ -11,20 +13,12 @@ export default function HelloWorld() {
 }
 
 export function HeaderHelloWorld({ text = "Hello World" }) {
-  const style = {
-    color: "red",
-    backgroundColor: "aqua",
-  };
-  return <h1 style={style}>{text.toUpperCase()}</h1>;
+  return <h1 className="title">{text.toUpperCase()}</h1>;
 }
 
 export function ParagraphHelloWorld() {
   const text = "Ini adalah Paragarph Hello World";
-  const style = {
-    color: "red",
-    backgroundColor: "aqua",
-  };
-  return <p style={style}>{text.toLowerCase()}</p>;
+  return <p className="content">{text.toLowerCase()}</p>;
 }
 
 // export default HelloWorld;
